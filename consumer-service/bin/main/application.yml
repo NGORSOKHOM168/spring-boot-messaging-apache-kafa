@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: consumer-services
+  datasource:
+    password: 123456
+    url: jdbc:postgresql://localhost:5432/notification
+    username: postgres
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+  kafka:
+    bootstrap-servers: http://localhost:9092
+    consumer:
+      group-id: notification-id
+server:
+  port: 8081
